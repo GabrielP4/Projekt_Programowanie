@@ -1,0 +1,75 @@
+﻿<UserControl x:Class="TestyProjekt.UC_Pages.UC_ConstructionProgress"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local="clr-namespace:TestyProjekt.UC_Pages"
+             mc:Ignorable="d" 
+             d:DesignHeight="450" d:DesignWidth="800">
+    <UserControl.Resources>
+        <Style TargetType="ProgressBar" x:Key="progesbarr">
+            <Setter Property="Foreground" Value="#FF1F1F38"/>
+            <Setter Property="Minimum" Value="0"/>
+            <Setter Property="Maximum" Value="100"/>
+            <Setter Property="Height" Value="25"/>
+        </Style>
+    </UserControl.Resources>
+    <Grid x:Name="bc_Main" Margin="0,0,0,0" Loaded="CPLT">
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="*"/>
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="70"/>
+            <RowDefinition Height="*"/>
+        </Grid.RowDefinitions>
+        <StackPanel Orientation="Horizontal" >
+            <TextBlock x:Name="header" 
+                           Text=""
+                           Style="{StaticResource font_style}"
+                           VerticalAlignment="Center" 
+                           Margin="5,0,0,0"/>
+            <TextBlock x:Name="title" 
+                           Text=""
+                           Style="{StaticResource font_style}"
+                           VerticalAlignment="Center" 
+                           Margin="5,0,0,0"/>
+        </StackPanel>
+
+        <Grid x:Name="DataList" 
+                          Grid.Row="1"
+                          Background="{x:Null}"
+              >
+            <Grid.RowDefinitions>
+                <RowDefinition Height="auto"/>
+                <RowDefinition Height="auto"/>
+            </Grid.RowDefinitions>
+            <StackPanel Orientation="Vertical"
+                        Margin="10">
+                <TextBlock 
+                            x:Name="FP"
+                    Style="{StaticResource font_style}"
+                    />
+                
+                <ProgressBar x:Name="PB_FP"
+                Value="{Binding FP}"
+                Style="{StaticResource progesbarr}"/>
+                
+            </StackPanel>
+
+            <StackPanel Orientation="Vertical"
+                        Grid.Row="1"
+                        Margin="10">
+                <TextBlock 
+                            x:Name="RP"
+                    Style="{StaticResource font_style}"/>
+                <ProgressBar x:Name="PB_RP"
+                Value="{Binding FP}"
+                Style="{StaticResource progesbarr}"/>
+                
+            </StackPanel>
+            
+        </Grid>
+
+
+    </Grid>
+</UserControl>
