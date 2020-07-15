@@ -4,11 +4,11 @@
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:TestyProjekt"
-        mc:Ignorable="d" 
+        mc:Ignorable="d"
         Title="Projekt"
-        MinHeight="600" 
+        MinHeight="600"
         MinWidth="800"
-        Height="600" 
+        Height="600"
         Width="800"
         WindowStyle="SingleBorderWindow"
         WindowStartupLocation="CenterScreen">
@@ -16,14 +16,14 @@
         <!--// Background Color //-->
         <Grid Background="#807FC3">
             <!--// Header Color //-->
-            <Grid Height="70" 
+            <Grid Height="70"
                   VerticalAlignment="Top"
-                  Background="#4A4985"/>
+                  Background="#4A4985" />
             <!--// Main content //-->
-            <local:UC_Sortie Margin="65,0,0,0" 
-                             Content="{Binding}" 
+            <local:UC_Sortie Margin="65,0,0,0"
+                             Content="{Binding}"
                              x:Name="bc_Main"
-                             Loaded="loaded_Start"/>
+                             Loaded="loaded_Start" />
             <!--// Navigation Panel //-->
             <Grid   x:Name="nav_pnl"
                     HorizontalAlignment="Left"
@@ -48,7 +48,7 @@
                                 <DropShadowEffect  BlurRadius="10"
                                                    ShadowDepth="1"
                                                    Direction="-90"
-                                                   Color="White"/>
+                                                   Color="White" />
                             </TextBlock.Effect>
                         </TextBlock>
                         <!--// Toggle Button //-->
@@ -60,20 +60,20 @@
                                       Height="30"
                                       Width="30"
                                       BorderThickness="0"
-                                      Style="{StaticResource tb_style}" 
-                                      Unchecked="Tg_Btn_Unchecked" 
+                                      Style="{StaticResource tb_style}"
+                                      Unchecked="Tg_Btn_Unchecked"
                                       Checked="Tg_Btn_Checked">
                             <!--// Toggle button default background image //-->
                             <ToggleButton.Background>
                                 <ImageBrush ImageSource="Assets/tgBtn_default.png"
-                                            Stretch="None"/>
+                                            Stretch="None" />
                             </ToggleButton.Background>
                             <!--// Toggle Button - Checked, Unchecked events //-->
                             <ToggleButton.Triggers>
                                 <EventTrigger RoutedEvent="ToggleButton.Unchecked">
                                     <BeginStoryboard>
                                         <Storyboard x:Name="HideStackPanel">
-                                            <DoubleAnimation  
+                                            <DoubleAnimation
                                                 Storyboard.TargetName="nav_pnl"
                                                 Storyboard.TargetProperty="Width"
                                                 BeginTime="0:0:0"
@@ -106,69 +106,66 @@
                                ScrollViewer.HorizontalScrollBarVisibility="Disabled">
                         <!--// Sortie //-->
                         <ListViewItem HorizontalAlignment="Left"
-                                      Margin="0,0,0,15" 
-                                      MouseEnter="ListViewItem_MouseEnter" 
+                                      Margin="0,0,0,15"
+                                      MouseEnter="ListViewItem_MouseEnter"
                                       Selected="ListViewItem_Sortie">
                             <StackPanel Orientation="Horizontal"
                                         Width="230">
                                 <Image Source="Assets/img_sortie.png"
                                        Stretch="None"
-                                       Margin="5,0,0,0"/>
+                                       Margin="5,0,0,0" />
                                 <TextBlock Text="Sortie"
                                            Margin="25,0,0,0"
-                                           Style="{StaticResource font_style}"/>
+                                           Style="{StaticResource font_style}" />
                             </StackPanel>
-
-
                             <!--// Tooltip //-->
                             <ListViewItem.ToolTip>
                                 <ToolTip x:Name="tt_home"
                                          Content="Sortie"
-                                         Style="{StaticResource tt_style}"/>
+                                         Style="{StaticResource tt_style}" />
                             </ListViewItem.ToolTip>
                         </ListViewItem>
                         <!--// ConstructionProgress //-->
                         <ListViewItem HorizontalAlignment="Left"
-                                      Margin="0,0,0,15" 
+                                      Margin="0,0,0,15"
                                       MouseEnter="ListViewItem_MouseEnter"
                                       Selected="ListViewItem_ConstructionProgress">
                             <StackPanel Orientation="Horizontal"
                                         Width="230">
                                 <Image Source="Assets/img_cp.png"
                                        Stretch="None"
-                                       Margin="5,0,0,0"/>
+                                       Margin="5,0,0,0" />
                                 <TextBlock Text="Construction"
                                            Margin="25,0,0,0"
-                                           Style="{StaticResource font_style}"/>
+                                           Style="{StaticResource font_style}" />
                             </StackPanel>
                             <!--// Tooltip //-->
                             <ListViewItem.ToolTip>
                                 <ToolTip x:Name="tt_contacts"
                                          Content="Construction progress"
                                          Width="auto"
-                                         Style="{StaticResource tt_style}"/>
+                                         Style="{StaticResource tt_style}" />
                             </ListViewItem.ToolTip>
                         </ListViewItem>
                         <!--// Nightwave //-->
                         <ListViewItem HorizontalAlignment="Left"
-                                      Margin="0,0,0,15" 
+                                      Margin="0,0,0,15"
                                       MouseEnter="ListViewItem_MouseEnter"
                                       Selected="ListViewItem_Nightwave">
                             <StackPanel Orientation="Horizontal"
                                         Width="230">
                                 <Image Source="Assets/img_nw.png"
                                        Stretch="None"
-                                       Margin="5,0,0,0"/>
+                                       Margin="5,0,0,0" />
                                 <TextBlock Text="Nightwave"
                                            Margin="25,0,0,0"
-                                           Style="{StaticResource font_style}"/>
+                                           Style="{StaticResource font_style}" />
                             </StackPanel>
                             <!--// Tooltip //-->
                             <ListViewItem.ToolTip>
                                 <ToolTip x:Name="tt_messages"
                                          Content="Nightwave"
-                                         Style="{StaticResource tt_style}"
-                                         />
+                                         Style="{StaticResource tt_style}" />
                             </ListViewItem.ToolTip>
                         </ListViewItem>
                         <!--// Listview items style template //-->
@@ -186,19 +183,19 @@
                                                     SnapsToDevicePixels="True">
                                                 <ContentPresenter HorizontalAlignment="{TemplateBinding HorizontalContentAlignment}"
                                                                   SnapsToDevicePixels="{TemplateBinding SnapsToDevicePixels}"
-                                                                  VerticalAlignment="{TemplateBinding VerticalContentAlignment}"/>
+                                                                  VerticalAlignment="{TemplateBinding VerticalContentAlignment}" />
                                             </Border>
                                             <ControlTemplate.Triggers>
                                                 <MultiTrigger>
                                                     <MultiTrigger.Conditions>
-                                                        <Condition Property="IsMouseOver" Value="True"/>
+                                                        <Condition Property="IsMouseOver" Value="True" />
                                                     </MultiTrigger.Conditions>
                                                     <Setter Property="Background"
                                                             TargetName="Bd"
-                                                            Value="#404D5B"/>
+                                                            Value="#404D5B" />
                                                     <Setter Property="BorderBrush"
                                                             TargetName="Bd"
-                                                            Value="#404D5B"/>
+                                                            Value="#404D5B" />
                                                 </MultiTrigger>
                                             </ControlTemplate.Triggers>
                                         </ControlTemplate>

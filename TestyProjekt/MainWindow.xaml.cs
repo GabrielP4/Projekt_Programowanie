@@ -1,18 +1,5 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using System.Windows;
-using System.Windows.Controls;
-using System.Windows.Data;
-using System.Windows.Documents;
+﻿using System.Windows;
 using System.Windows.Input;
-using System.Windows.Media;
-using System.Windows.Media.Imaging;
-using System.Windows.Navigation;
-using System.Windows.Shapes;
-using TestyProjekt.Data;
 using TestyProjekt.UC_Pages;
 
 namespace TestyProjekt
@@ -26,28 +13,31 @@ namespace TestyProjekt
 		{
 			InitializeComponent();
 		}
+
 		private void ListViewItem_Sortie(object sender, RoutedEventArgs e)
 		{
 			DataContext = new UC_Sortie();
 		}
+
 		private void ListViewItem_ConstructionProgress(object sender, RoutedEventArgs e)
 		{
 			DataContext = new UC_ConstructionProgress();
 		}
+
 		private void ListViewItem_Nightwave(object sender, RoutedEventArgs e)
 		{
 			DataContext = new UC_Nightwave();
 		}
+
 		private void loaded_Start(object sender, RoutedEventArgs e)
 		{
 			DataContext = new UC_Start();
 		}
-		//GUI  ListViewItem_ConstructionProgress
 
+		//GUI  ListViewItem_ConstructionProgress
 		private void ListViewItem_MouseEnter(object sender, MouseEventArgs e)
 		{
 			// Set tooltip visibility
-
 			if (Tg_Btn.IsChecked == true)
 			{
 				tt_home.Visibility = Visibility.Collapsed;
@@ -76,6 +66,5 @@ namespace TestyProjekt
 		{
 			Tg_Btn.IsChecked = false;
 		}
-
 	}
 }
