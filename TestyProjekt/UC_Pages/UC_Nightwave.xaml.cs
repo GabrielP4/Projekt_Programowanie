@@ -25,9 +25,13 @@ namespace TestyProjekt.UC_Pages
 		public async Task ShowData()
 		{
 			var data = await dataKeeper.MakeObjects();
-			DataList.ItemsSource = data.ActiveChallenges;
-			header.Text = "Nightwave";
-			title.Text = "Expiry at: " + data.Expiry.LocalDateTime.ToString();
+			if (data != null)
+			{
+				DataList.ItemsSource = data.ActiveChallenges;
+				header.Text = "Nightwave";
+				title.Text = "Expiry at: " + data.Expiry.LocalDateTime.ToString();
+			}
+			else { header.Text = "Check you internet connetions"; }
 		}
 	}
 }

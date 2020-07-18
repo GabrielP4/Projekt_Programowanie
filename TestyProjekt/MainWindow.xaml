@@ -11,7 +11,8 @@
         Height="600"
         Width="800"
         WindowStyle="SingleBorderWindow"
-        WindowStartupLocation="CenterScreen">
+        WindowStartupLocation="CenterScreen"
+        Background="#FF1F1F38" Foreground="White">
     <Grid>
         <!--// Background Color //-->
         <Grid Background="#807FC3">

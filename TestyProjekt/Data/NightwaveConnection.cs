@@ -8,13 +8,14 @@ using System.Threading.Tasks;
 
 namespace TestyProjekt.Data
 {
-	internal class NightwaveConnection
+	public class NightwaveConnection
 	{
 		private string addres = "https://api.warframestat.us/pc/nightwave";
 
 		public async Task<Temperatures> MakeObjects()
 		{
 			Temperatures root = new Temperatures();
+			root = null;
 			try
 			{
 				root = JsonConvert.DeserializeObject<Temperatures>(await DownloadData());
@@ -28,7 +29,7 @@ namespace TestyProjekt.Data
 
 		public async Task<string> DownloadData()
 		{
-			string testRequest = "";
+			string testRequest = null;
 			try
 			{
 				var request = HttpWebRequest.CreateHttp(addres);
