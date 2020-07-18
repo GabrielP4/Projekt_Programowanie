@@ -31,7 +31,7 @@ namespace TestyProjekt.UC_Pages
 				header.Text = "Nightwave";
 				title.Text = "Expiry at: " + data.Expiry.LocalDateTime.ToString();
 			}
-			else { header.Text = "Check you internet connetions"; }
+			else { header.Text = "Check your internet connections"; }
 		}
 	}
 }
