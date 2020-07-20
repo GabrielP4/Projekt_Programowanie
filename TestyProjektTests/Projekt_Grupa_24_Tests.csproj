@@ -4,6 +4,8 @@
     <TargetFramework>netcoreapp3.1</TargetFramework>
 
     <IsPackable>false</IsPackable>
+
+    <RootNamespace>Projekt_Grupa_24</RootNamespace>
   </PropertyGroup>
 
   <ItemGroup>

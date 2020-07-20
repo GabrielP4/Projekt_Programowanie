@@ -5,7 +5,7 @@ using System.Windows.Controls;
 namespace Projekt_Grupa_24.UC_Pages
 {
 	/// <summary>
-	/// Interaction logic for UC_Sortie.xaml
+	/// Główna logika zakładki UC_Sortie.xaml
 	/// </summary>
 	public partial class UC_Sortie : UserControl
 	{
