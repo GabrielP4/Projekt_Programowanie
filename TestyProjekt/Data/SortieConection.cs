@@ -20,8 +20,7 @@ namespace TestyProjekt.Data
 		/// </summary>
 		/// Z danych pobranych przez metodę DownloadData
 		/// metoda tworzy obiekt na podstawie klas Temperatures, Variant.
-		/// Zwraca obiekt root.
-		/// <returns>root</returns>
+		/// <returns>obiekt root</returns>
 		public async Task<Temperatures> MakeObjects()
 		{
 			Temperatures root = new Temperatures();
@@ -41,8 +40,7 @@ namespace TestyProjekt.Data
 		/// Metoda towrząca dane
 		/// </summary>
 		/// Metoda towrzy string z otrzymanych danych do dalszej pracy w programie.
-		/// Zwraca string testRequest.
-		/// <returns>testRequest</returns>
+		/// <returns>string testRequest</returns>
 		public async Task<string> DownloadData()
 		{
 			string testRequest = null;

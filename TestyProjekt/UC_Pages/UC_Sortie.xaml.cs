@@ -2,10 +2,10 @@
 using System.Windows.Controls;
 using TestyProjekt.Data;
 
-namespace TestyProjekt
+namespace TestyProjekt.UC_Pages
 {
 	/// <summary>
-	/// Główna logika zakładki UC_Sortie.xaml
+	/// Interaction logic for UC_Sortie.xaml
 	/// </summary>
 	public partial class UC_Sortie : UserControl
 	{
