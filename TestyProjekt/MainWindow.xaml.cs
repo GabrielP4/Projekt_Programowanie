@@ -1,8 +1,8 @@
-﻿using System.Windows;
+﻿using Projekt_Grupa_24.UC_Pages;
+using System.Windows;
 using System.Windows.Input;
-using TestyProjekt.UC_Pages;
 
-namespace TestyProjekt
+namespace Projekt_Grupa_24
 {
 	/// <summary>
 	/// Główna logika aplikacji

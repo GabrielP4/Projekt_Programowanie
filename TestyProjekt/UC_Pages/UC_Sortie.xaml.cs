@@ -1,8 +1,8 @@
-﻿using System.Threading.Tasks;
+﻿using Projekt_Grupa_24.Data;
+using System.Threading.Tasks;
 using System.Windows.Controls;
-using TestyProjekt.Data;
 
-namespace TestyProjekt.UC_Pages
+namespace Projekt_Grupa_24.UC_Pages
 {
 	/// <summary>
 	/// Interaction logic for UC_Sortie.xaml

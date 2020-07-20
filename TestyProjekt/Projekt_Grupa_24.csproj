@@ -3,6 +3,7 @@
     <OutputType>WinExe</OutputType>
     <TargetFramework>netcoreapp3.1</TargetFramework>
     <UseWPF>true</UseWPF>
+    <RootNamespace>Projekt_Grupa_24</RootNamespace>
   </PropertyGroup>
   <ItemGroup>
     <None Remove="Assets\img_contact.png" />

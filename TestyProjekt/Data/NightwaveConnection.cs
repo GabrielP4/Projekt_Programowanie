@@ -6,7 +6,7 @@ using System.Net;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace TestyProjekt.Data
+namespace Projekt_Grupa_24.Data
 {
 	/// <summary>
 	/// Klasa odpowiadająca za przetworzenie danych dla zakładki "Nightwave"

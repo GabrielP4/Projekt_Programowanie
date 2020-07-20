@@ -1,8 +1,8 @@
 ﻿using System.Threading.Tasks;
 using System.Windows.Controls;
-using TestyProjekt.Data;
+using Projekt_Grupa_24.Data;
 
-namespace TestyProjekt.UC_Pages
+namespace Projekt_Grupa_24.UC_Pages
 {
 	/// <summary>
 	/// Główna logika zakładki UC_Nightwave.xaml

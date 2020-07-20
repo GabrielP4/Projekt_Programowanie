@@ -1,7 +1,7 @@
 ﻿using Microsoft.VisualStudio.TestTools.UnitTesting;
 using System.Threading.Tasks;
 
-namespace TestyProjekt.Data.Tests
+namespace Projekt_Grupa_24.Data.Tests
 {
 	[TestClass()]
 	public class NightwaveConnectionTests

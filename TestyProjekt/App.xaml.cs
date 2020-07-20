@@ -1,5 +1,5 @@
 ﻿using System.Windows;
-namespace TestyProjekt
+namespace Projekt_Grupa_24
 {
 	/// <summary>
 	/// Interaction logic for App.xaml
