@@ -6,7 +6,7 @@
              xmlns:local="clr-namespace:TestyProjekt"
              mc:Ignorable="d"
              d:DesignHeight="450" d:DesignWidth="800">
-    <Grid x:Name="bc_Main" Margin="0,0,0,0" Loaded="SLT">
+    <Grid x:Name="bc_Main" Margin="0,0,0,0">
         <Grid.ColumnDefinitions>
             <ColumnDefinition Width="*" />
         </Grid.ColumnDefinitions>

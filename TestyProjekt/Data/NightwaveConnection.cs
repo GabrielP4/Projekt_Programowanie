@@ -8,10 +8,20 @@ using System.Threading.Tasks;
 
 namespace TestyProjekt.Data
 {
+	/// <summary>
+	/// Klasa odpowiadająca za przetworzenie danych dla zakładki "Nightwave"
+	/// </summary>
 	public class NightwaveConnection
 	{
 		private string addres = "https://api.warframestat.us/pc/nightwave";
 
+		/// <summary>
+		///	Metoda tworząca obiekt
+		/// </summary>
+		/// Z danych pobranych przez metodę DownloadData
+		/// metoda tworzy obiekt na podstawie klas Temperatures, EChallenge.
+		/// Zwraca obiekt root.
+		/// <returns>root</returns>
 		public async Task<Temperatures> MakeObjects()
 		{
 			Temperatures root = new Temperatures();
@@ -27,6 +37,12 @@ namespace TestyProjekt.Data
 			return root;
 		}
 
+		/// <summary>
+		/// Metoda towrząca dane
+		/// </summary>
+		/// Metoda towrzy string z otrzymanych danych do dalszej pracy w programie.
+		/// Zwraca string testRequest.
+		/// <returns>testRequest</returns>
 		public async Task<string> DownloadData()
 		{
 			string testRequest = null;
@@ -55,6 +71,9 @@ namespace TestyProjekt.Data
 			return testRequest;
 		}
 
+		/// <summary>
+		/// Klasa zawierająca główny szkielet pobieranego obiektu
+		/// </summary>
 		public partial class Temperatures
 		{
 			[JsonProperty("id")]
@@ -65,9 +84,6 @@ namespace TestyProjekt.Data
 
 			[JsonProperty("expiry")]
 			public DateTimeOffset Expiry { get; set; }
-
-			[JsonProperty("params")]
-			public Params Params { get; set; }
 
 			[JsonProperty("rewardTypes")]
 			public List<string> RewardTypes { get; set; }
@@ -88,6 +104,9 @@ namespace TestyProjekt.Data
 			public List<EChallenge> ActiveChallenges { get; set; }
 		}
 
+		/// <summary>
+		/// Klasa zawierająca szkielet listy zawartej w obiekcie
+		/// </summary>
 		public partial class EChallenge
 		{
 			[JsonProperty("id")]
@@ -113,10 +132,6 @@ namespace TestyProjekt.Data
 
 			[JsonProperty("reputation")]
 			public long Reputation { get; set; }
-		}
-
-		public partial class Params
-		{
 		}
 	}
 }

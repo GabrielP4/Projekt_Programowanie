@@ -14,26 +14,20 @@
         WindowStartupLocation="CenterScreen"
         Background="#FF1F1F38" Foreground="White">
     <Grid>
-        <!--// Background Color //-->
         <Grid Background="#807FC3">
-            <!--// Header Color //-->
             <Grid Height="70"
                   VerticalAlignment="Top"
                   Background="#4A4985" />
-            <!--// Main content //-->
-            <local:UC_Sortie Margin="65,0,0,0"
+            <UserControl Margin="65,0,0,0"
                              Content="{Binding}"
                              x:Name="bc_Main"
                              Loaded="loaded_Start" />
-            <!--// Navigation Panel //-->
             <Grid   x:Name="nav_pnl"
                     HorizontalAlignment="Left"
                     Width="65"
                     Background="#1F1F38">
                 <StackPanel x:Name="st_pnl">
-                    <!--// Grid for the Menu Toggle Button //-->
                     <Grid Height="90">
-                        <!--// Menu title text //-->
                         <TextBlock  Grid.Row="1"
                                     Grid.Column="0"
                                     Margin="73,-20,0,0"
@@ -44,7 +38,6 @@
                                     HorizontalAlignment="Left"
                                     VerticalAlignment="Center"
                                     Style="{StaticResource font_style}">
-                            <!--// Shadow Effect //-->
                             <TextBlock.Effect>
                                 <DropShadowEffect  BlurRadius="10"
                                                    ShadowDepth="1"
@@ -52,7 +45,6 @@
                                                    Color="White" />
                             </TextBlock.Effect>
                         </TextBlock>
-                        <!--// Toggle Button //-->
                         <ToggleButton x:Name="Tg_Btn"
                                       Grid.Column="0"
                                       VerticalAlignment="Center"
@@ -64,12 +56,10 @@
                                       Style="{StaticResource tb_style}"
                                       Unchecked="Tg_Btn_Unchecked"
                                       Checked="Tg_Btn_Checked">
-                            <!--// Toggle button default background image //-->
                             <ToggleButton.Background>
                                 <ImageBrush ImageSource="Assets/tgBtn_default.png"
                                             Stretch="None" />
                             </ToggleButton.Background>
-                            <!--// Toggle Button - Checked, Unchecked events //-->
                             <ToggleButton.Triggers>
                                 <EventTrigger RoutedEvent="ToggleButton.Unchecked">
                                     <BeginStoryboard>
@@ -100,12 +90,10 @@
                             </ToggleButton.Triggers>
                         </ToggleButton>
                     </Grid>
-                    <!--// ListView with menu list items //-->
                     <ListView  x:Name="LV"
                                Background="Transparent"
                                BorderBrush="Transparent"
                                ScrollViewer.HorizontalScrollBarVisibility="Disabled">
-                        <!--// Sortie //-->
                         <ListViewItem HorizontalAlignment="Left"
                                       Margin="0,0,0,15"
                                       MouseEnter="ListViewItem_MouseEnter"
@@ -119,14 +107,12 @@
                                            Margin="25,0,0,0"
                                            Style="{StaticResource font_style}" />
                             </StackPanel>
-                            <!--// Tooltip //-->
                             <ListViewItem.ToolTip>
                                 <ToolTip x:Name="tt_home"
                                          Content="Sortie"
                                          Style="{StaticResource tt_style}" />
                             </ListViewItem.ToolTip>
                         </ListViewItem>
-                        <!--// ConstructionProgress //-->
                         <ListViewItem HorizontalAlignment="Left"
                                       Margin="0,0,0,15"
                                       MouseEnter="ListViewItem_MouseEnter"
@@ -140,7 +126,6 @@
                                            Margin="25,0,0,0"
                                            Style="{StaticResource font_style}" />
                             </StackPanel>
-                            <!--// Tooltip //-->
                             <ListViewItem.ToolTip>
                                 <ToolTip x:Name="tt_contacts"
                                          Content="Construction progress"
@@ -148,7 +133,6 @@
                                          Style="{StaticResource tt_style}" />
                             </ListViewItem.ToolTip>
                         </ListViewItem>
-                        <!--// Nightwave //-->
                         <ListViewItem HorizontalAlignment="Left"
                                       Margin="0,0,0,15"
                                       MouseEnter="ListViewItem_MouseEnter"
@@ -162,14 +146,12 @@
                                            Margin="25,0,0,0"
                                            Style="{StaticResource font_style}" />
                             </StackPanel>
-                            <!--// Tooltip //-->
                             <ListViewItem.ToolTip>
                                 <ToolTip x:Name="tt_messages"
                                          Content="Nightwave"
                                          Style="{StaticResource tt_style}" />
                             </ListViewItem.ToolTip>
                         </ListViewItem>
-                        <!--// Listview items style template //-->
                         <ListView.ItemContainerStyle>
                             <Style TargetType="ListViewItem">
                                 <Setter Property="Template">

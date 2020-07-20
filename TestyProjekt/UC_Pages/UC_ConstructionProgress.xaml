@@ -14,7 +14,7 @@
             <Setter Property="Height" Value="25" />
         </Style>
     </UserControl.Resources>
-    <Grid x:Name="bc_Main" Margin="0,0,0,0" Loaded="CPLT">
+    <Grid x:Name="bc_Main" Margin="0,0,0,0">
         <Grid.ColumnDefinitions>
             <ColumnDefinition Width="*" />
         </Grid.ColumnDefinitions>

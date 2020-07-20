@@ -36,7 +36,7 @@
             </Style.Triggers>
         </Style>
     </UserControl.Resources>
-    <Grid x:Name="bc_Main" Margin="0,0,0,0" Loaded="NWLT">
+    <Grid x:Name="bc_Main" Margin="0,0,0,0">
         <Grid.ColumnDefinitions>
             <ColumnDefinition Width="*" />
         </Grid.ColumnDefinitions>

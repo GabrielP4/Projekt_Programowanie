@@ -4,14 +4,27 @@ using System.IO;
 using System.Net;
 using System.Text;
 using System.Threading.Tasks;
+
 namespace TestyProjekt.Data
 {
+	/// <summary>
+	/// Klasa odpowiadająca za przetworzenie danych dla zakładki "Construction progress"
+	/// </summary>
 	public class ConstructionProgressConnection
 	{
 		private string addres = "https://api.warframestat.us/pc/constructionProgress";
+
+		/// <summary>
+		///	Metoda tworząca obiekt
+		/// </summary>
+		/// Z danych pobranych przez metodę DownloadData
+		/// metoda tworzy obiekt na podstawie klas Temperatures.
+		/// Zwraca obiekt root.
+		/// <returns>root</returns>
 		public async Task<Temperatures> MakeObjects()
 		{
 			Temperatures root = new Temperatures();
+			root = null;
 			try
 			{
 				root = JsonConvert.DeserializeObject<Temperatures>(await DownloadData());
@@ -22,9 +35,16 @@ namespace TestyProjekt.Data
 			}
 			return root;
 		}
+
+		/// <summary>
+		/// Metoda towrząca dane
+		/// </summary>
+		/// Metoda towrzy string z otrzymanych danych do dalszej pracy w programie.
+		/// Zwraca string testRequest.
+		/// <returns>testRequest</returns>
 		public async Task<string> DownloadData()
 		{
-			string testRequest = "";
+			string testRequest = null;
 			try
 			{
 				var request = HttpWebRequest.CreateHttp(addres);
@@ -49,14 +69,21 @@ namespace TestyProjekt.Data
 			}
 			return testRequest;
 		}
+
+		/// <summary>
+		/// Klasa zawierająca główny szkielet pobieranego obiektu
+		/// </summary>
 		public class Temperatures
 		{
 			[JsonProperty("id")]
 			public string Id { get; set; }
+
 			[JsonProperty("fomorianProgress")]
 			public double FomorianProgress { get; set; }
+
 			[JsonProperty("razorbackProgress")]
 			public double RazorbackProgress { get; set; }
+
 			[JsonProperty("unknownProgress")]
 			public string UnknownProgress { get; set; }
 		}

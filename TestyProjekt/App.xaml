@@ -4,10 +4,8 @@
              xmlns:local="clr-namespace:TestyProjekt"
              StartupUri="MainWindow.xaml">
     <Application.Resources>
-        <!--// Toggle Button Style Template //-->
         <ImageBrush x:Key="tb_mouse_over"
                     ImageSource="Assets/tgBtn_MouseOver.png" />
-        <!--// Text font style //-->
         <Style x:Key="font_style" TargetType="TextBlock">
             <Setter Property="FontFamily" Value="Fonts/Roboto-Light.ttf #Roboto" />
             <Setter Property="VerticalAlignment" Value="Center" />
@@ -15,7 +13,6 @@
             <Setter Property="Foreground" Value="White" />
             <Setter Property="FontSize" Value="20" />
         </Style>
-        <!--// Tooltip Style Template //-->
         <Style TargetType="ToolTip" x:Key="tt_style">
             <Setter Property="Placement" Value="Right" />
             <Setter Property="Height" Value="40" />
