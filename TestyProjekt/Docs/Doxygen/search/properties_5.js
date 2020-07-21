@@ -1,0 +1,6 @@
+var searchData=
+[
+  ['id_98',['Id',['../class_projekt___grupa__24_1_1_data_1_1_construction_progress_connection_1_1_temperatures.html#a2eada79a5230ca3db8130f3c10206e53',1,'Projekt_Grupa_24.Data.ConstructionProgressConnection.Temperatures.Id()'],['../class_projekt___grupa__24_1_1_data_1_1_nightwave_connection_1_1_temperatures.html#ad4cac36c9f90d8fb6760214795174d67',1,'Projekt_Grupa_24.Data.NightwaveConnection.Temperatures.Id()'],['../class_projekt___grupa__24_1_1_data_1_1_nightwave_connection_1_1_e_challenge.html#a21b0b3ee0a66a9946568a4b2d84bed4d',1,'Projekt_Grupa_24.Data.NightwaveConnection.EChallenge.Id()'],['../class_projekt___grupa__24_1_1_data_1_1_sortie_conection_1_1_temperatures.html#a4e1a843eb2ba337cd4ca748a269edb98',1,'Projekt_Grupa_24.Data.SortieConection.Temperatures.Id()']]],
+  ['isdaily_99',['IsDaily',['../class_projekt___grupa__24_1_1_data_1_1_nightwave_connection_1_1_e_challenge.html#a45860e0edc9c127163d71c16319950bc',1,'Projekt_Grupa_24::Data::NightwaveConnection::EChallenge']]],
+  ['iselite_100',['IsElite',['../class_projekt___grupa__24_1_1_data_1_1_nightwave_connection_1_1_e_challenge.html#a4b16c9eee144aab04ca0e01db156aec3',1,'Projekt_Grupa_24::Data::NightwaveConnection::EChallenge']]]
+];

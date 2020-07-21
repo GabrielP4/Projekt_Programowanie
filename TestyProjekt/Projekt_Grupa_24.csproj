@@ -28,4 +28,7 @@
     <Resource Include="Assets\tgBtn_default.png" />
     <Resource Include="Assets\tgBtn_MouseOver.png" />
   </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Docs\Doxygen\" />
+  </ItemGroup>
 </Project>
